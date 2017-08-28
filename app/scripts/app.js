@@ -13,12 +13,19 @@
 		// determines the number of properties for a state
 		$stateProvider
 			.state('landing', {
+			// url here is only a / becasue it is the home page (landing page)
 			url: '/',
 			templateUrl: '/templates/landing.html'
 		})
 			.state('album', {
+			// what to diplay at the end of the url in the browser
 			url: '/album',
+			//where find the html file to inject
 			templateUrl: '/templates/album.html'
+		})
+			.state('collection', {
+			url: '/collection',
+			templateUrl: 'templates/collection.html'
 		});
 		
 		
