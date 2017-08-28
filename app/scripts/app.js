@@ -13,6 +13,7 @@
 		// determines the number of properties for a state
 		$stateProvider
 			.state('landing', {
+			//indicates the root of the app
 			url: '/',
 			templateUrl: '/templates/landing.html'
 		})
@@ -25,13 +26,11 @@
 			templateUrl: 'templates/collection.html'
 		});
 		
-		
-		
-		
 	}
 	
 	// the first argument is the prescribed name of the module, the second argument is injecting an array that is filled with a list of external modules (extensions that angular can use)
 	angular
 		.module('blocJams', ['ui.router'])
+	//.config is a property of the angular object. The second config calls line 3 function
 		.config(config);
 })();
