@@ -27,7 +27,11 @@
          	</div>
 		</nav>
 	</nav>
+	<!-- Here we are using angular to inject other content from different html files. This is useful becasue we now ha ve global code which we won't have t recode later in different html files. It also helps because the browser only now has to update on html file rather than loading a whole bunch of different html files. -->
+	<ui-view></ui-view>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<!-- link filed for the UI-Router. It has to be after the angular link becasue it us an extension of angular. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 	<script src="/scripts/app.js"></script>
 </body>
 </html>

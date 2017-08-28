@@ -46,7 +46,7 @@ body.landing {
      position: relative;
      padding: 2rem;
      text-align: center;
-	 opacity: 0;
+	 opacity: 1;
 	 color: white;
      -webkit-transform: scaleX(0.5) translateY(3rem);
      -moz-transform: scaleX(0.5) translateY(3rem);
