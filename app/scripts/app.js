@@ -13,8 +13,9 @@
 		// determines the number of properties for a state
 		$stateProvider
 			.state('landing', {
-			//indicates the root of the app
+			//indicates the root of the app. When calling for things we dont need to use LandingCtrl we only need to use landing
 			url: '/',
+			controller: 'LandingCtrl as landing',
 			templateUrl: '/templates/landing.html'
 		})
 			.state('album', {
@@ -23,6 +24,7 @@
 		})
 			.state('collection', {
 			url: '/collection',
+			controller: 'CollectionCtrl as collection',
 			templateUrl: 'templates/collection.html'
 		});
 		
