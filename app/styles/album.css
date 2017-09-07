@@ -53,7 +53,7 @@
      width: 5%;
  }
 
-.album-song-button {
+.album-song-buttom {
      text-align: center;
      font-size: 14px;
      background-color: white;
@@ -64,13 +64,13 @@
      height: 28px;
  }
  
- .album-song-button:hover {
+ .album-song-buttom : hover {
      cursor: pointer;
      color: white;
      background-color: rgb(210, 40, 123);
  }
  
- .album-song-button span {
+ .album-song-buttom span {
      line-height: 28px;
  }
 
