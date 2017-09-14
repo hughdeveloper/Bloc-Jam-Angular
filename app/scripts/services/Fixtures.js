@@ -35,18 +35,21 @@ var albumPicasso = {
      ]
  };
 		
+	
+		Fixtures.getCollection = function(numOfAlbums) {
+			var collectionArray = [];
+			for (var i = 0; i < numOfAlbums; i++) {
+				collectionArray.push(angular.copy(albumPicasso));
+			}
+			return collectionArray;
+		};
+		
 		
 		Fixtures.getAlbum = function() {
 			return albumPicasso;
 		};
 		
-		Fixtures.getCollection = function(numOfAlbums) {
-			this.collectionArray = [];
-			for (var i = 0, i < numOfAlbums, i++) {
-				this.collectionArray.push(angular.copy(albumPicasso));
-			}
-			return collectionArray;
-		};
+
 		
 		
 		return Fixtures;
@@ -56,5 +59,5 @@ var albumPicasso = {
 		.module('blocJams')
 	//name of controller then callback function
 	// .factory() desugnates the use of the factory recipe
-		.factory(Fixtures, Fixtures)
+		.factory('Fixtures', Fixtures)
 })();
