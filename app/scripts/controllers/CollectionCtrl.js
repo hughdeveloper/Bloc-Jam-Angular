@@ -1,10 +1,7 @@
 (function() {
-	function CollectionCtrl() {
+	function CollectionCtrl(Fixtures) {
 		//setting up an empty array
-		this.albums = [];
-		for (var i =0; i<12; i++) {
-			this.albums.push(angular.copy(albumPicasso));
-		}
+		this.albums = Fixtures.getCollection(12);
 	}
 	
 	angular

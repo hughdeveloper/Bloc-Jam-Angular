@@ -4,7 +4,7 @@
 		
 		
 		
-		var albumPicasso = {
+var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
      label: 'Cubism',
@@ -38,6 +38,14 @@
 		
 		Fixtures.getAlbum = function() {
 			return albumPicasso;
+		};
+		
+		Fixtures.getCollection = function(numOfAlbums) {
+			this.collectionArray = [];
+			for (var i = 0, i < numOfAlbums, i++) {
+				this.collectionArray.push(angular.copy(albumPicasso));
+			}
+			return collectionArray;
 		};
 		
 		
