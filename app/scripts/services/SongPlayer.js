@@ -54,13 +54,13 @@
 				}
 			} 	 
      };
-		/*
+		
 		 SongPlayer.play = function(song) {
 			 currentBuzzObject.pause();
 			 song.playing = false;
 		 };
 		 
-		 */
+		 
 		 
           return SongPlayer;
 		 
