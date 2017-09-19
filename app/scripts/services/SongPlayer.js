@@ -38,6 +38,7 @@
 		 
 		 
 		 SongPlayer.play = function(song) {
+			 console.log(song);
 			 if(currentSong !== song) {
 				 
 				 
@@ -55,11 +56,10 @@
 			} 	 
      };
 		
-		 SongPlayer.play = function(song) {
-			 currentBuzzObject.pause();
-			 song.playing = false;
-		 };
-		 
+		  SongPlayer.pause = function(song) {
+     		currentBuzzObject.pause();
+     		song.playing = false;
+ };
 		 
 		 
           return SongPlayer;
