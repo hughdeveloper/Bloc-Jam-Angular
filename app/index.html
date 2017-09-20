@@ -2,30 +2,31 @@
 <!-- ngApp is a built in angular directive that link the root module to the html tage in this case. It can be used to link other elements such as the <body> element. Angular needs to know the root element -->
 <!-- ng itself has not real significance but relates to Angular -->
 <html ng-app="blocJams">
+
 <head lang="en">
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Bloc Jams Angular</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
-     <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-     <link rel="stylesheet" type="text/css" href="styles/main.css">
-     <link rel="stylesheet" type="text/css" href="styles/landing.css">
-     <link rel="stylesheet" type="text/css" href="styles/collection.css">
-     <link rel="stylesheet" type="text/css" href="styles/album.css">
-     <link rel="stylesheet" type="text/css" href="styles/player_bar.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+	<link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/landing.css">
+	<link rel="stylesheet" type="text/css" href="styles/collection.css">
+	<link rel="stylesheet" type="text/css" href="styles/album.css">
+	<link rel="stylesheet" type="text/css" href="styles/player_bar.css">
 </head>
-	
+
 <body>
 	<nav>
 		<nav class="navbar">
 			<!-- instead of using href UI-Router uses ui-sref (short for "user interface state reference")  to trigger the state -->
 			<a ui-sref="landing" class="logo">
-             	<img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
+				<img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
 			</a>
-         	<div class="links-container">
-             	<a ui-sref="collection" class="navbar-link">collection</a>
-         	</div>
+			<div class="links-container">
+				<a ui-sref="collection" class="navbar-link">collection</a>
+			</div>
 		</nav>
 	</nav>
 	<!-- Here we are using angular to inject other content from different html files. This is useful becasue we now ha ve global code which we won't have t recode later in different html files. It also helps because the browser only now has to update on html file rather than loading a whole bunch of different html files. -->
@@ -36,9 +37,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
 	<script src="/scripts/app.js"></script>
 	<script src="/scripts/services/Fixtures.js"></script>
- 	<script src="/scripts/services/SongPlayer.js"></script>
+	<script src="/scripts/services/SongPlayer.js"></script>
 	<script src="/scripts/controllers/LandingCtrl.js"></script>
 	<script src="/scripts/controllers/CollectionCtrl.js"></script>
 	<script src="scripts/controllers/AlbumCtrl.js"></script>
 </body>
+
 </html>

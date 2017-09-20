@@ -1,18 +1,17 @@
 <section class="album-covers container clearfix">
-    <div class="collection-album-container column fourth" ng-Repeat='album in collection.albums track by $index'>
-        <img src="{{album.albumArtUrl}}"/>
-        <div class="collection-album-info caption">
-            <p>
+	<div class="collection-album-container column fourth" ng-Repeat='album in collection.albums track by $index'>
+		<img src="{{album.albumArtUrl}}" />
+		<div class="collection-album-info caption">
+			<p>
 				<!--displaying the title of the album which is taken from the album object itself this is also evdient for the album artist and song duration (length) -->
-                <a class="album-name" ui-sref="album">{{album.title}}</a>
-                <br/>
-                <a ui-sref="album">{{album.artist}}</a>
-                <br/>
-				{{album.songs.length}} songs
-                <br/>
-            </p>
-        </div>
-    </div>
+				<a class="album-name" ui-sref="album">{{album.title}}</a>
+				<br/>
+				<a ui-sref="album">{{album.artist}}</a>
+				<br/> {{album.songs.length}} songs
+				<br/>
+			</p>
+		</div>
+	</div>
 </section>
 
 
