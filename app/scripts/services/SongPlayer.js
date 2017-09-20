@@ -12,6 +12,14 @@
 * @type {Object}
 */
 		 var currentBuzzObject = null;
+	
+		 
+		var playSong = function (song){
+			currentBuzzObject.play();
+			song.playing = true;
+		};
+		 
+		 
 		 
 		 
 /**
@@ -44,8 +52,7 @@
 		 	setSong(song);
 				 
 				 
-         	currentBuzzObject.play();
-		 	song.playing = true;
+         	playSong(song);
 		 }
 			
 			else if (currentSong === song){
