@@ -42,7 +42,7 @@ var albumPicasso = {
 				collectionArray.push(angular.copy(albumPicasso));
 			}
 			return collectionArray;
-		};
+		}; 
 		
 		
 		Fixtures.getAlbum = function() {

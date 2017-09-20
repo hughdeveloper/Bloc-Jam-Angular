@@ -2,6 +2,7 @@
      function SongPlayer() {
           var SongPlayer = {};
 		 
+		 
 		 var currentSong = null;
 		 
 		 
@@ -34,9 +35,7 @@
     currentSong = song;
  };
 		 
-		 
-		 
-		 
+		
 		 SongPlayer.play = function(song) {
 			 console.log(song);
 			 if(currentSong !== song) {
@@ -59,9 +58,9 @@
 		  SongPlayer.pause = function(song) {
      		currentBuzzObject.pause();
      		song.playing = false;
- };
-		 
-		 
+ 	 };
+		  
+		 // put the object SongPlayer to the public scope 
           return SongPlayer;
 		 
      }
