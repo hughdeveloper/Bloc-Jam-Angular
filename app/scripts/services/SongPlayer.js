@@ -3,8 +3,6 @@
  		var SongPlayer = {};
 
 
- 		var currentSong = null;
-
 
 
  		/**
@@ -32,7 +30,7 @@
  		var setSong = function (song) {
  			if (currentBuzzObject) {
  				currentBuzzObject.stop();
- 				currentSong.playing = null;
+ 				SongPlayer.currentSong.playing = null;
  			}
 
  			currentBuzzObject = new buzz.sound(song.audioUrl, {
@@ -40,27 +38,33 @@
  				preload: true
  			});
 
- 			currentSong = song;
+ 			SongPlayer.currentSong = song;
  		};
 
+		SongPlayer.currentSong = null;
+		
 
  		SongPlayer.play = function (song) {
- 			console.log(song);
- 			if (currentSong !== song) {
-
-
+			// song is equal to either the song or the value of SongPlayer.currentSong
+			song = song || SongPlayer.currentSong;
+ 			if (SongPlayer.currentSong !== song) {
  				setSong(song);
-
-
  				playSong(song);
- 			} else if (currentSong === song) {
+				
+ 			} else if (Songplayer.currentSong === song) {
  				if (currentBuzzObject.isPaused()) {
  					currentBuzzObject.play();
  				}
+				
+				else if (SongPlayer.currentSong === null) {
+					setSong(0);
+					playSong(0);
+				}
  			}
  		};
 
  		SongPlayer.pause = function (song) {
+			song = song || SongPlayer.currentSong;
  			currentBuzzObject.pause();
  			song.playing = false;
  		};
