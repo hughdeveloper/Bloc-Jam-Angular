@@ -1,10 +1,12 @@
  (function () {
- 	function SongPlayer() {
+ 	function SongPlayer(Fixtures) {
  		var SongPlayer = {};
 
+ 		var currentAlbum = Fixtures.getAlbum();
 
-
-
+ 		var getSongIndex = function (song) {
+ 			return currentAlbum.songs.indexOf(song);
+ 		};
  		/**
  		 * @desc Buzz object audio file
  		 * @type {Object}
@@ -41,29 +43,50 @@
  			SongPlayer.currentSong = song;
  		};
 
-		SongPlayer.currentSong = null;
-		
+ 		SongPlayer.currentSong = null;
+
 
  		SongPlayer.play = function (song) {
-			// song is equal to either the song or the value of SongPlayer.currentSong
-			song = song || SongPlayer.currentSong;
+ 			// song is equal to either the song or the value of SongPlayer.currentSong
+ 			song = song || SongPlayer.currentSong;
  			if (SongPlayer.currentSong !== song) {
  				setSong(song);
  				playSong(song);
-				
+
  			} else if (SongPlayer.currentSong === song) {
  				if (currentBuzzObject.isPaused()) {
  					currentBuzzObject.play();
-					song.playing=true;
+ 					song.playing = true;
  				}
  			}
  		};
 
  		SongPlayer.pause = function (song) {
-			song = song || SongPlayer.currentSong;
+ 			song = song || SongPlayer.currentSong;
  			currentBuzzObject.pause();
  			song.playing = false;
  		};
+
+
+
+
+ 		SongPlayer.previous = function () {
+ 			var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+ 			currentSongIndex--;
+
+ 			if (currentSongIndex < 0) {
+ 				currentBuzzObject.stop();
+ 				SongPlayer.currentSong.playing = null;
+ 			} else {
+ 				var song = currentAlbum.songs[currentSongIndex];
+ 				setSong(song);
+ 				playSong(song);
+ 			}
+ 		};
+
+
+
+
 
  		// put the object SongPlayer to the public scope 
  		return SongPlayer;
@@ -72,6 +95,6 @@
 
  	angular
  		.module('blocJams')
- 		.factory('SongPlayer', SongPlayer);
+ 		.factory('SongPlayer', ['Fixtures', SongPlayer]);
 
  })();
