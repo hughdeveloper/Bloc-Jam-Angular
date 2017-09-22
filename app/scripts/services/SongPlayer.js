@@ -55,11 +55,6 @@
  				if (currentBuzzObject.isPaused()) {
  					currentBuzzObject.play();
  				}
-				
-				else if (SongPlayer.currentSong === null) {
-					setSong(0);
-					playSong(0);
-				}
  			}
  		};
 
