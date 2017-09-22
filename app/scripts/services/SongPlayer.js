@@ -19,7 +19,7 @@
  			song.playing = true;
  		};
 
-var stopSong = function (song) {
+ 		var stopSong = function (song) {
  			currentBuzzObject.stop();
  			song.playing = null;
  		};
@@ -85,7 +85,7 @@ var stopSong = function (song) {
  			}
  		};
 
-SongPlayer.next = function () {
+ 		SongPlayer.next = function () {
  			var currentSongIndex = getSongIndex(SongPlayer.currentSong);
  			currentSongIndex++;
 
