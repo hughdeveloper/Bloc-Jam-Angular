@@ -7,6 +7,8 @@
  		var getSongIndex = function (song) {
  			return currentAlbum.songs.indexOf(song);
  		};
+		
+		
  		/**
  		 * @desc Buzz object audio file
  		 * @type {Object}
@@ -44,6 +46,7 @@
  			});
 
  			SongPlayer.currentSong = song;
+			
  		};
 
  		SongPlayer.currentSong = null;
