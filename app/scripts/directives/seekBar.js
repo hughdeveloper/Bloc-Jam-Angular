@@ -52,6 +52,8 @@
  				scope.trackThumb = function () {
  					$document.bind('mousemove.thumb', function (event) {
  						var percent = calculatePercent(seekBar, event);
+						
+						//scope.$apply allows the function to be updated to the html/view in a new turn. Angular code is already rapped in scope.$digest which is actually what the scope.$apply function calls. When we get rid of the scope.apply the slider in the player bar still updates but not smoothly in realtime. Rather it waits for the click to happen and be let go of before the veiw is updated, however javascipt is calculating the information that is being inputted in real time. When we place back the scope.$apply, the veiw is updated as the calculations are being made.
  						scope.$apply(function () {
  							scope.value = percent * scope.max;
  						});
