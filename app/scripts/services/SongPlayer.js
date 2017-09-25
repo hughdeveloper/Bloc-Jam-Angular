@@ -50,7 +50,12 @@
  		};
 
  		SongPlayer.currentSong = null;
+		/**
+		* @desc Current playback time (in seconds) of currently playing song
+		*@type {number}
+		**/
 
+		SongPlayer.currentTime = null;
 
  		SongPlayer.play = function (song) {
  			// song is equal to either the song or the value of SongPlayer.currentSong
