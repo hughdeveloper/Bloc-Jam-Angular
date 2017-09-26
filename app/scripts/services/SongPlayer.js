@@ -7,8 +7,8 @@
  		var getSongIndex = function (song) {
  			return currentAlbum.songs.indexOf(song);
  		};
-		
-		
+
+
  		/**
  		 * @desc Buzz object audio file
  		 * @type {Object}
@@ -46,16 +46,16 @@
  			});
 
  			SongPlayer.currentSong = song;
-			
+
  		};
 
  		SongPlayer.currentSong = null;
-		/**
-		* @desc Current playback time (in seconds) of currently playing song
-		*@type {number}
-		**/
+ 		/**
+ 		 * @desc Current playback time (in seconds) of currently playing song
+ 		 *@type {number}
+ 		 **/
 
-		SongPlayer.currentTime = null;
+ 		SongPlayer.currentTime = null;
 
  		SongPlayer.play = function (song) {
  			// song is equal to either the song or the value of SongPlayer.currentSong
