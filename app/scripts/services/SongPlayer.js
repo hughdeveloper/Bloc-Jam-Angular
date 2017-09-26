@@ -123,6 +123,34 @@
  			}
  		};
 
+		
+		
+		
+		
+		
+		
+		
+		
+		SongPlayer.volume = 50;
+		
+		SongPlayer.setVolume = function(volume) {
+			if (currentBuzzObject) {
+				currentBuzzObject.setVolume(volume);
+			}
+		};
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
  		// put the object SongPlayer to the public scope 
  		return SongPlayer;
 

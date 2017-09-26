@@ -106,7 +106,7 @@
  }
 
 .control-group.volume .seek-bar .thumb {
-     left: 0%;
+     left: 50%;
  }
 
  .seek-bar .fill {
