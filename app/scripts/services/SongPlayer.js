@@ -65,7 +65,9 @@
 
  		SongPlayer.play = function (song) {
  			// song is equal to either the song or the value of SongPlayer.currentSong
+			
  			song = song || SongPlayer.currentSong;
+			console.log(song);
  			if (SongPlayer.currentSong !== song) {
  				setSong(song);
  				playSong(song);
@@ -73,7 +75,8 @@
  			} else if (SongPlayer.currentSong === song) {
  				if (currentBuzzObject.isPaused()) {
  					playSong(song);
- 				}
+				}
+
  			}
  		};
 
