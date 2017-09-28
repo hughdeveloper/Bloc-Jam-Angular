@@ -44,12 +44,12 @@
  				formats: ['mp3'],
  				preload: true
  			});
-			
-     currentBuzzObject.bind('timeupdate', function() {
-         $rootScope.$apply(function() {
-             SongPlayer.currentTime = currentBuzzObject.getTime();
-         });
-     });
+
+ 			currentBuzzObject.bind('timeupdate', function () {
+ 				$rootScope.$apply(function () {
+ 					SongPlayer.currentTime = currentBuzzObject.getTime();
+ 				});
+ 			});
 
  			SongPlayer.currentSong = song;
 
@@ -65,9 +65,9 @@
 
  		SongPlayer.play = function (song) {
  			// song is equal to either the song or the value of SongPlayer.currentSong
-			
+
  			song = song || SongPlayer.currentSong;
-			console.log(song);
+ 			console.log(song);
  			if (SongPlayer.currentSong !== song) {
  				setSong(song);
  				playSong(song);
@@ -75,7 +75,7 @@
  			} else if (SongPlayer.currentSong === song) {
  				if (currentBuzzObject.isPaused()) {
  					playSong(song);
-				}
+ 				}
 
  			}
  		};
@@ -126,34 +126,30 @@
  			}
  		};
 
-		
-		
-		
-		
-		
-		
-		
-		
-		SongPlayer.volume = 50;
-		
-		SongPlayer.setVolume = function(volume) {
-			if (currentBuzzObject) {
-				currentBuzzObject.setVolume(volume);
-			}
-		};
-		
-		
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+ 		SongPlayer.volume = 50;
+
+ 		SongPlayer.setVolume = function (volume) {
+ 			if (currentBuzzObject) {
+ 				currentBuzzObject.setVolume(volume);
+ 			}
+ 		};
+
+
+
+
+
+
+
+
+
  		// put the object SongPlayer to the public scope 
  		return SongPlayer;
 
